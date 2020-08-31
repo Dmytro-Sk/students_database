@@ -1,0 +1,46 @@
+/* Global Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+body {
+	background: #f5f7fa;
+	/*background-image: url("/students_database/media/img/IMG-026b7d04ab98b45f542bdb216fd84dfe-V.jpg");*/
+	background-repeat: no-repeat;
+	background-size: 100%
+}
+
+.wrapper {
+	background: rgba(255, 255, 255, 0.8);
+	max-width: 1400px;
+	margin: 0 auto;
+	box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.7);
+	margin-top: 60px;
+}
+
+.logo-title {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px 0px;
+}
+
+.alert {
+    margin-top: 10px;
+}
+
+/* Groups Selector */
+.group_selector {
+    margin-top: 30px;
+}
+
+.main-table {
+    margin-top: 10px;
+}
+
+
+
+
+#footer {
+    border-top: 2px solid #333;
+    margin-top: 10px;
+}
