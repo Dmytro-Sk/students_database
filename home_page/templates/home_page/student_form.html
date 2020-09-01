@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Сервіс обліку учнів</title>
+    <meta name="descriptions" content="Система обліку студентів навчального закладу">
+
+    <!--  include styles  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sketchy/bootstrap.min.css"
+          integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="./student_form.css">
+</head>
+<body class="home-page">
+    <!-- Start Container -->
+    <div class="container wrapper">
+
+        <form>
+            <fieldset>
+
+                <legend>Форма редагування учня</legend>
+
+                <div class="form-group">
+                    <label class="col-form-label" for="inputDefault1">Прізвище <sup>*</sup></label>
+                    <input type="text" class="form-control" placeholder="Введіть прізвище" id="inputDefault1">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="inputDefault2">Ім'я <sup>*</sup></label>
+                    <input type="text" class="form-control" placeholder="Введіть ім'я" id="inputDefault2">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="inputDefault3">По-батькові <sup>*</sup></label>
+                    <input type="text" class="form-control" placeholder="Введіть по-батькові" id="inputDefault3">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="inputDefault4">Дата народження <sup>*</sup></label>
+                    <input type="text" class="form-control" placeholder="Введіть по-батькові" id="inputDefault4">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Електронна адреса</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                           placeholder="Введіть електронну адресу">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">Фото</label>
+                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                    <small id="fileHelp" class="form-text text-muted">Виберіть фото.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleSelect1">Example select</label>
+                    <select class="form-control" id="exampleSelect1">
+                        <option value="">3-А</option>
+                        <option value="">3-Б</option>
+                        <option value="">3-В</option>
+                        <option value="">3-Г</option>
+                        <option value="">3-Д</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea">Example textarea</label>
+                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Зберегти</button>
+                <button type="submit" class="btn btn-danger">Скасувати</button>
+            </fieldset>
+        </form>
+
+    </div>
+    <!-- End Container -->
+
+    <!-- Javascripts Section -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

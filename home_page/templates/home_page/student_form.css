@@ -1,0 +1,20 @@
+/* Global Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+.home-page {
+	/*background: #f5f7fa;*/
+	background-image: url("/students_database/media/img/IMG-2acbe0d6ed265e5ddbe5b4d392baf095-V.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%
+}
+
+.wrapper {
+	background: rgba(255, 255, 255, 0.8);
+	max-width: 600px;
+	margin: 0 auto;
+	box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.7);
+	margin-top: 60px;
+	margin-bottom: 60px;
+}

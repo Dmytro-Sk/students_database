@@ -12,10 +12,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sketchy/bootstrap.min.css"
           integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R"
           crossorigin="anonymous">
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./classes.css">
 </head>
-<body>
-
+<body class="home-page">
     <!-- Start Container -->
     <div class="container wrapper">
 
@@ -76,13 +75,13 @@
             <div class="col-md-12">
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active" href="#">Учні</a>
+                        <a class="nav-link" href="#">Учні</a>
                     </li>
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" href="#">Відвідування</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="#">Класи</a>
+                        <a class="nav-link active" href="#">Класи</a>
                     </li>
                 </ul>
             </div>
@@ -93,13 +92,10 @@
         <div class="row" id="content-columns">
             <div class="col-md-12" id="content-column">
 
-                <!-- Status Message -->
-                <div class="alert alert-warning">Зміни скасовано.</div>
-
                 <!-- Add Student Button -->
-                <h2>База Студентів</h2>
-                <a class="btn btn-primary" href="">Додати учня</a>
-                <a class="btn btn-danger" href="">Видалити учня</a>
+                <h2>Класи</h2>
+                <a class="btn btn-primary" href="">Додати клас</a>
+                <a class="btn btn-danger" href="">Видалити клас</a>
 
                 <!-- Start Students Listing -->
                 <div class="main-table">
@@ -107,21 +103,16 @@
                         <thead>
                             <tr>
                                 <th><a href="">№</a></th>
-                                <th>Фото</th>
-                                <th><a href="">Прізвище &uarr;</a></th>
-                                <th><a href="">Ім’я</a></th>
-                                <th><a href="">№ Білету</a></th>
+                                <th><a href="">Клас &uarr;</a></th>
+                                <th><a href="">Староста &uarr;</a></th>
                                 <th>Дії</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td><img src="/students_database/media/profile_pics/default.png"
-                                         alt="Фото учня" width="30" height="30" class="img-circle"></td>
-                                <td><a href="" title="Редагувати">Корост</a></td>
-                                <td><a href="" title="Редагувати">Андрій</a></td>
-                                <td>2123</td>
+                                <td><a href="" title="Редагувати">3-А</a></td>
+                                <td><a href="" title="Редагувати">Корост Андрій</a></td>
                                 <td>
                                     <div class="btn-group" role="group">
                                         <button id="btnGroupDrop1" type="button"
@@ -182,7 +173,7 @@
         <!-- Start Footer -->
         <div class="row" id="footer">
             <div class="col-md-12">
-                &copy; 2020 Сервіс обліку студентів
+                м.Київ, гімназія №178, 1994-2020pр.
             </div>
         </div>
         <!-- End Footer -->

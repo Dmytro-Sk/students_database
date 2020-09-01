@@ -3,7 +3,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-body {
+.home-page {
 	background: #f5f7fa;
 	/*background-image: url("/students_database/media/img/IMG-026b7d04ab98b45f542bdb216fd84dfe-V.jpg");*/
 	background-repeat: no-repeat;
@@ -16,6 +16,7 @@ body {
 	margin: 0 auto;
 	box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.7);
 	margin-top: 60px;
+	margin-bottom: 60px;
 }
 
 .logo-title {
@@ -24,12 +25,8 @@ body {
     padding: 15px 0px;
 }
 
-.alert {
-    margin-top: 10px;
-}
-
 /* Groups Selector */
-.group_selector {
+.group-selector {
     margin-top: 30px;
 }
 
@@ -43,4 +40,5 @@ body {
 #footer {
     border-top: 2px solid #333;
     margin-top: 10px;
+    text-align: center;
 }
