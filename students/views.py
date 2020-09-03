@@ -3,7 +3,31 @@ from django.http import HttpResponse
 
 
 def students_list(request):
-    return render(request, 'students/students.html', {})
+    students = [
+        {
+            'id': 1,
+            'first_name': 'Віталій',
+            'last_name': 'Подоба',
+            'birthday': '02/05/2012',
+            'image': 'students/1.jpg',
+        },
+        {
+            'id': 2,
+            'first_name': 'Корост',
+            'last_name': 'Андрій',
+            'birthday': '06/10/2012',
+            'image': 'students/2.jpg',
+        },
+        {
+            'id': 3,
+            'first_name': 'Оришко',
+            'last_name': 'Олег',
+            'birthday': '03/12/2011',
+            'image': 'students/default.png',
+        },
+    ]
+    context = {'students': students}
+    return render(request, 'students/students.html', context)
 
 
 def students_add(request):
