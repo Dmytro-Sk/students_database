@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="uk">
 <head>
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sketchy/bootstrap.min.css"
           integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R"
           crossorigin="anonymous">
-    <link rel="stylesheet" href="./classes.css">
+    <link rel="stylesheet" href="{% static 'students/base.css' %}">
 </head>
 <body class="home-page">
     <!-- Start Container -->
@@ -75,100 +76,20 @@
             <div class="col-md-12">
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="#">Учні</a>
+                        <a class="nav-link active" href="{% url 'students' %}">Учні</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="#">Відвідування</a>
+                        <a class="nav-link" href="{% url 'visiting' %}">Відвідування</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active" href="#">Класи</a>
+                        <a class="nav-link" href="{% url 'classes' %}">Класи</a>
                     </li>
                 </ul>
             </div>
         </div>
         <!-- End SubHeader -->
 
-        <!-- Start Main Page Content -->
-        <div class="row" id="content-columns">
-            <div class="col-md-12" id="content-column">
-
-                <!-- Add Student Button -->
-                <h2>Класи</h2>
-                <a class="btn btn-primary" href="">Додати клас</a>
-                <a class="btn btn-danger" href="">Видалити клас</a>
-
-                <!-- Start Students Listing -->
-                <div class="main-table">
-                    <table class="table table-hover table-striped">
-                        <thead>
-                            <tr>
-                                <th><a href="">№</a></th>
-                                <th><a href="">Клас &uarr;</a></th>
-                                <th><a href="">Староста &uarr;</a></th>
-                                <th>Дії</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td><a href="" title="Редагувати">3-А</a></td>
-                                <td><a href="" title="Редагувати">Корост Андрій</a></td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button id="btnGroupDrop1" type="button"
-                                                class="btn btn-secondary dropdown-toggle"
-                                                data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="false">
-                                            Дія
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Відвідування</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Редагувати</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Видалити</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- End Students Listing -->
-
-                    <!-- Start Pagination -->
-                    <div>
-                        <ul class="pagination">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#">&laquo;</a>
-                            </li>
-                            <li class="page-item active">
-                                <a class="page-link" href="#">1</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">3</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">4</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">5</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">&raquo;</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- End Pagination -->
-
-                </div>
-                <!-- End Students Listing -->
-
-            </div>
-        </div>
-        <!-- End Main Page Content -->
+        {% block content %}{% endblock %}
 
         <!-- Start Footer -->
         <div class="row" id="footer">
