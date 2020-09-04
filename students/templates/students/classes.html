@@ -1,12 +1,13 @@
 {% extends 'students/base.html' %}
+{% block meta_title %}Класи{% endblock meta_title %}
+{% block title %}Класи{% endblock title %}
 {% block content %}
 
 <!-- Start Main Page Content -->
 <div class="row" id="content-columns">
     <div class="col-md-12" id="content-column">
 
-        <!-- Add Student Button -->
-        <h2>Класи</h2>
+        <!-- Add Classes Button -->
         <a class="btn btn-primary" href="{% url 'classes-add' %}">Додати клас</a>
 
         <!-- Start Students Listing -->

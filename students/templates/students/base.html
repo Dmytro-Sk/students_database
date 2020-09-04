@@ -6,14 +6,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Сервіс обліку учнів</title>
     <meta name="descriptions" content="Система обліку студентів навчального закладу">
+    <title>Сервіс обліку учнів - {% block meta_title %}{% endblock meta_title %}</title>
 
     <!--  include styles  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sketchy/bootstrap.min.css"
           integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R"
           crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'students/base.css' %}">
+    {% block extra_css %}{% endblock extra_css %}
 </head>
 <body class="home-page">
     <!-- Start Container -->
@@ -75,19 +76,40 @@
         <div class="row" id="sub-header">
             <div class="col-md-12">
                 <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link active" href="{% url 'students' %}">Учні</a>
+                    <li  class="nav-item" role="presentation">
+                        {% url 'students' as students_url %}
+                        {% if request.path == students_url %}
+                            <a class="nav-link active" href="{{ students_url }}">Учні</a>
+                        {% else %}
+                            <a class="nav-link" href="{{ students_url }}">Учні</a>
+                        {% endif %}
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="{% url 'visiting' %}">Відвідування</a>
+                        {% url 'visiting' as visiting_url %}
+                        {% if request.path == visiting_url %}
+                            <a class="nav-link active" href="{{ visiting_url }}">Відвідування</a>
+                        {% else %}
+                            <a class="nav-link" href="{{ visiting_url }}">Відвідування</a>
+                        {% endif %}
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="{% url 'classes' %}">Класи</a>
+                        {% url 'classes' as classes_url %}
+                        {% if classes_url in request.path %}
+                            <a class="nav-link active" href="{{ classes_url }}">Класи</a>
+                        {% else %}
+                            <a class="nav-link" href="{{ classes_url }}">Класи</a>
+                        {% endif %}
                     </li>
                 </ul>
             </div>
         </div>
         <!-- End SubHeader -->
+
+        <!-- Status Message -->
+        {% comment '1' %}
+        <div class="alert alert-warning">Зміни скасовано.</div>
+        {% endcomment %}
+        <h2>{% block title %}{% endblock title %}</h2>
 
         {% block content %}{% endblock %}
 
@@ -112,6 +134,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+{% block extra_js %}{% endblock extra_js %}
 
 </body>
 </html>
